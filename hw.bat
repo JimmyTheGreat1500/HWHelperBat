@@ -1,15 +1,28 @@
 @echo off 
 title homework 
 color 0a
-goto strt
-
 :strt
 if exist ver88.txt goto hm
-goto installyo
-
-:sad
-start install.bat
-exit
+cls
+echo Are you sure you want a fresh install? (y/n)
+set /p go=
+if %go% == y goto Installs
+if %go% == Y goto Installs
+else exit
+cls&echo Currently no homework is assigned to this period. >"p1.hw"
+cls&echo Currently no homework is assigned to this period. >"p2.hw"
+cls&echo Currently no homework is assigned to this period. >"p3.hw"
+cls&echo Currently no homework is assigned to this period. >"p4.hw"
+cls&echo Currently no homework is assigned to this period. >"p5.hw"
+cls&echo Currently no homework is assigned to this period. >"p6.hw"
+cls&echo Currently no homework is assigned to this period. >"p7.hw"
+cls&echo Currently no homework is assigned to this period. >"p8.hw"
+cls&echo Currently no homework is assigned to this period. >"p9.hw"
+cls&echo Currently no homework is assigned to this period. >"p10.hw"
+cls&echo Verified >"ver88.txt"
+echo Installation complete!
+pause
+goto strt
 
 :hm
 cls
@@ -27,6 +40,7 @@ echo 2. Write down homework
 echo 3. Erase all homework
 echo 4. Scan for errors
 echo 5. Uninstall
+echo 6. Restart
 echo --------------------------------------------------------------------------
 set /p fr=
 if %fr% == 1 goto View
@@ -34,11 +48,15 @@ if %fr% == 2 goto hmsc
 if %fr% == 3 goto erase
 if %fr% == 4 goto scan
 if %fr% == 5 goto unin
+if %fr% == 6 goto restart
 if %fr% == 8063 goto sec
 if %fr% == e exit
 if %fr% == E exit
 goto hms
 
+:restart
+start install.bat
+exit
 
 :hmsc
 cls
@@ -117,7 +135,6 @@ goto hms
 
 :dev
 cls
-echo jacob khan gets no bitchs
 echo.
 echo DEV MENU
 echo --------
@@ -208,37 +225,6 @@ if %yes1% == n goto hms
 if %yes1% == Y goto installyo&exit
 if %yes1% == N goto hms
 goto scan
-
-
-
-:installyo
-cls
-echo Are you sure you want a fresh install? (y/n)
-set /p go=
-if %go% == y goto Installs
-if %go% == Y goto Installs
-if %go% == n exit
-if %go% == N exit
-goto installyo
-
-:Installs
-cls&echo Currently no homework is assigned to this period. >"p1.hw"
-cls&echo Currently no homework is assigned to this period. >"p2.hw"
-cls&echo Currently no homework is assigned to this period. >"p3.hw"
-cls&echo Currently no homework is assigned to this period. >"p4.hw"
-cls&echo Currently no homework is assigned to this period. >"p5.hw"
-cls&echo Currently no homework is assigned to this period. >"p6.hw"
-cls&echo Currently no homework is assigned to this period. >"p7.hw"
-cls&echo Currently no homework is assigned to this period. >"p8.hw"
-cls&echo Currently no homework is assigned to this period. >"p9.hw"
-cls&echo Currently no homework is assigned to this period. >"p10.hw"
-cls&echo Verified >"ver88.txt"
-
-echo Installation complete!
-pause
-goto strt
-
-
 :unin
 echo press any key to uninstall the application
 pause
