@@ -577,8 +577,7 @@ echo 0 is the background, (black) and A is the text (Green).
 echo.
 echo This can be changed later.
 set /p colorg=
-color %colorg% >nul
-IF %ERRORLEVEL% NEQ 1 goto col
+color %colorg%
 echo color %colorg% >"color.hw"
 goto sett
 
