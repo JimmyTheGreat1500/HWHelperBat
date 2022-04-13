@@ -586,8 +586,53 @@ goto sett
 
 :credits
 cls
-
-pause
+echo         CREDITS
+echo ------------------------
+echo       Created by:
+echo       Ciberlords
+timeout /t 1 >nul
+cls
+echo         CREDITS
+echo ------------------------
+echo       Created by:
+echo    Jimmythegreat100
+timeout /t 1 >nul
+cls
+echo         CREDITS
+echo ------------------------
+echo       Created by:
+echo       Ciberlords
+timeout /t 1 >nul
+cls
+echo         CREDITS
+echo ------------------------
+echo       Created by:
+echo    Jimmythegreat100
+timeout /t 1 >nul
+cls
+echo         CREDITS
+echo ------------------------
+echo       Created by:
+echo       Ciberlords
+timeout /t 1 >nul
+cls
+echo         CREDITS
+echo ------------------------
+echo       Created by:
+echo    Jimmythegreat100
+timeout /t 1 >nul
+cls
+echo         CREDITS
+echo ------------------------
+echo       Created by:
+echo       Ciberlords
+timeout /t 1 >nul
+cls
+echo         CREDITS
+echo ------------------------
+echo       Created by:
+echo    Jimmythegreat100
+timeout /t 1 >nul
 goto sett
 
 
