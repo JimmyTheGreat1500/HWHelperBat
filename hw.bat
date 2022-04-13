@@ -1,7 +1,7 @@
 @echo off 
 title homework
 if exist color.hw set /p color=<"color.hw"&goto lolzx
-color 0a
+
 
 :colmn
 cls
@@ -449,21 +449,44 @@ goto strt
 :contact
 cls
 echo Connect with us!
-echo --------------------
+echo ----------------------------------
 echo 1. Google Classroom
 echo 2. Assistance form
 echo 3. Email
 echo 4. Our webpages
+echo 5. Our GitHub pages (open source)
 echo e. Return to menu
-echo --------------------
+echo ----------------------------------
 
 set /p gog=
 if %gog% == 1 start https://classroom.google.com/c/NDY2NjE3MTQ5ODIx?cjc=as7icqv
 if %gog% == 2 start https://docs.google.com/forms/d/e/1FAIpQLSerZ8t4TdwZa0Vgn6J_7g9veLbwWHWdHUuxaEUQAqHykNrv1Q/viewform
 if %gog% == 3 goto email
 if %gog% == 4 goto webp
+if %gog% == 5 goto gith
 if %gog% == e goto hms
 goto contact
+
+
+:gith
+cls
+echo.
+echo             GitHub menu
+echo -------------------------------------
+echo 1. Soure code for this
+echo 2. Ciberlords GitHub profile
+echo 3. JimmytheGreat100's GitHub profile
+echo e. return to settings
+echo -------------------------------------
+set /p githch=
+if %githch% == 1 start https://github.com/JimmyTheGreat1500/HWHelperBatch/blob/main/hw.bat
+if %githch% == 2 start https://github.com/ciberlords
+if %githch% == 3 start https://github.com/jimmythegreat1500
+if %githch% == e goto contact
+if %githch% == E goto contact
+goto gith
+
+
 
 
 :email
@@ -495,20 +518,19 @@ echo what would you like to do? (input number) or type E to exit at any time.
 echo.
 echo 1. Manage homework
 echo 2. Manage reminders
-echo 3. Scan for errors
-echo 4. Connect with us
-echo 5. Settings
-echo 6. Restart software
-echo 7. Uninstall
+echo 3. Connect with us
+echo 4. Settings
+echo 5. Restart software
+echo 6. Uninstall
 echo --------------------------------------------------------------------------
 set /p frs=
 if %frs% == 1 goto hwez
 if %frs% == 2 goto remin
-if %frs% == 3 goto scan
-if %frs% == 4 goto contact
-if %frs% == 5 goto sett
-if %frs% == 6 goto restartesc
-if %frs% == 7 goto unin
+::if %frs% == 3 goto scan
+if %frs% == 3 goto contact
+if %frs% == 4 goto sett
+if %frs% == 5 goto restartesc
+if %frs% == 6 goto unin
 if %frs% == e exit
 if %frs% == E exit
 goto hms
@@ -550,13 +572,24 @@ echo what would you like to do? (input number) or type E to exit at any time.
 echo.
 echo 1. Change text color
 echo 2. Review TOS
+echo 3. Scan for errors
+echo 4. Credits
 echo e. exit
 echo --------------------------------------------------------------------------
 set /p settch=
 if %settch% == 1 goto col
 if %settch% == 2 goto TOS
+if %settch% == 3 goto scan
+if %settch% == 4 goto credits
 if %settch% == e goto hms
 goto sett
+
+:credits
+cls
+
+pause
+goto sett
+
 
 
 :col
